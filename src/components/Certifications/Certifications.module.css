@@ -1,0 +1,18 @@
+.cornerGlow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24rem;
+  height: 24rem;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(191, 90, 242, 0.04) 0%, transparent 70%);
+  filter: blur(60px);
+}
+
+.certIconBg {
+  background: rgba(191, 90, 242, 0.1);
+}
+
+.eduIconBg {
+  background: rgba(0, 245, 255, 0.08);
+}

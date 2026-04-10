@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { Target, Rocket, ShieldCheck, Zap, HeartHandshake } from 'lucide-react'
+import styles from './About.module.css'
 
 const traitIcons = [
   <Target size={28} strokeWidth={1.5} className="text-[#00f5ff]" />,
@@ -20,7 +21,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-          {/* Left: title + text only */}
+          {/* Left: title + text */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -30,36 +31,24 @@ export default function About() {
             <p className="text-xs tracking-widest uppercase text-[#00f5ff]/60 mb-4">
               {t('about.title')}
             </p>
-            <h2
-              className="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight mb-2 text-gradient-white"
-              style={{ letterSpacing: '-0.02em' }}
-            >
+            <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight mb-2 text-gradient-white tracking-section">
               Alianne Elm
             </h2>
 
             {/* Country chips */}
             <div className="flex items-center gap-2 mb-8 flex-wrap">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium text-white/50"
-                style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}>
-                <span className="text-sm">🇨🇺</span> {t('about.cuba')}
-              </span>
+              <span className="chip"><span className="text-sm">🇨🇺</span> {t('about.cuba')}</span>
               <span className="text-white/15 text-xs">·</span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium text-white/50"
-                style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}>
-                <span className="text-sm">🇪🇸</span> {t('about.origin')}
-              </span>
+              <span className="chip"><span className="text-sm">🇪🇸</span> {t('about.origin')}</span>
               <span className="text-white/15 text-xs">·</span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium text-white/50"
-                style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}>
-                <span className="text-sm">🇸🇪</span> {t('about.based')}
-              </span>
+              <span className="chip"><span className="text-sm">🇸🇪</span> {t('about.based')}</span>
             </div>
 
             <p className="text-white/60 leading-relaxed text-lg mb-5">{t('about.body')}</p>
             <p className="text-white/50 leading-relaxed">{t('about.body2')}</p>
           </motion.div>
 
-          {/* Right: trait chips + stats + personal cards */}
+          {/* Right: traits + stats + personal cards */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -67,7 +56,7 @@ export default function About() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col gap-4"
           >
-            {/* Trait chips 2x2 grid */}
+            {/* Trait chips 2×2 */}
             <div className="grid grid-cols-2 gap-4">
               {traits.map((trait, i) => (
                 <motion.div
@@ -78,9 +67,7 @@ export default function About() {
                   transition={{ delay: i * 0.1, duration: 0.5 }}
                   className="glass-card rounded-2xl p-6 text-center glow-cyan"
                 >
-                  <div className="flex justify-center mb-3">
-                    {traitIcons[i]}
-                  </div>
+                  <div className="flex justify-center mb-3">{traitIcons[i]}</div>
                   <p className="text-sm font-semibold text-white/80">{t(`about.${trait}`)}</p>
                 </motion.div>
               ))}
@@ -96,21 +83,15 @@ export default function About() {
             >
               <div>
                 <p className="text-[clamp(2rem,6vw,3.5rem)] font-bold text-gradient-cyan leading-none">7+</p>
-                <p className="text-sm text-white/40 mt-1">
-                  {isSv ? 'års erfarenhet' : 'years of experience'}
-                </p>
+                <p className="text-sm text-white/40 mt-1">{isSv ? 'års erfarenhet' : 'years of experience'}</p>
               </div>
               <div className="text-center">
                 <p className="text-[clamp(2rem,6vw,3.5rem)] font-bold text-gradient-purple leading-none">3</p>
-                <p className="text-sm text-white/40 mt-1">
-                  {isSv ? 'länder' : 'countries'}
-                </p>
+                <p className="text-sm text-white/40 mt-1">{isSv ? 'länder' : 'countries'}</p>
               </div>
               <div className="text-right">
                 <p className="text-[clamp(2rem,6vw,3.5rem)] font-bold leading-none" style={{ color: '#30d158' }}>10+</p>
-                <p className="text-sm text-white/40 mt-1">
-                  {isSv ? 'tech-stackar' : 'tech stacks'}
-                </p>
+                <p className="text-sm text-white/40 mt-1">{isSv ? 'tech-stackar' : 'tech stacks'}</p>
               </div>
             </motion.div>
 
@@ -120,13 +101,9 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="glass-card rounded-2xl p-5 flex items-start gap-4"
-              style={{ borderColor: 'rgba(0,245,255,0.15)' }}
+              className={`${styles.quantumCardBorder} glass-card rounded-2xl p-5 flex items-start gap-4`}
             >
-              <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 text-lg"
-                style={{ background: 'rgba(0,245,255,0.08)' }}
-              >
+              <div className={`${styles.quantumIconBg} w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 text-lg`}>
                 ⟨ψ|
               </div>
               <div>
@@ -141,22 +118,15 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              className="glass-card rounded-2xl p-5 flex items-start gap-4"
-              style={{ borderColor: 'rgba(191,90,242,0.15)' }}
+              className={`${styles.nonprofitCardBorder} glass-card rounded-2xl p-5 flex items-start gap-4`}
             >
-              <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                style={{ background: 'rgba(191,90,242,0.08)' }}
-              >
+              <div className={`${styles.nonprofitIconBg} w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0`}>
                 <HeartHandshake size={18} strokeWidth={1.5} style={{ color: '#bf5af2' }} />
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-1 flex-wrap">
                   <p className="text-sm font-semibold text-white/80">{t('about.nonprofitTitle')}</p>
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs text-white/50"
-                    style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}>
-                    <span>🇨🇺</span> Cuba
-                  </span>
+                  <span className="chip"><span>🇨🇺</span> Cuba</span>
                 </div>
                 <p className="text-xs text-white/40 leading-relaxed">{t('about.nonprofitDesc')}</p>
               </div>

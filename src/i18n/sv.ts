@@ -4,7 +4,7 @@ export const sv = {
     stack: 'Kompetenser',
     experience: 'Erfarenhet',
     certifications: 'Certifieringar',
-    softskills: 'Mjuka kompetenser',
+    softskills: 'Soft Skills',
     contact: 'Kontakt',
   },
   hero: {
@@ -94,7 +94,7 @@ export const sv = {
     ],
   },
   softskills: {
-    title: 'Mjuka kompetenser',
+    title: 'Soft Skills',
     subtitle: 'Bortom koden',
     hardWorking: {
       label: 'Arbetsam',

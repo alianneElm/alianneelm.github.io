@@ -1,0 +1,11 @@
+.bgAccent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 400px;
+  pointer-events: none;
+  background: radial-gradient(ellipse, rgba(0, 245, 255, 0.03) 0%, transparent 70%);
+  filter: blur(60px);
+}

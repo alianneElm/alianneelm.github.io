@@ -1,0 +1,16 @@
+.bottomGlow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 300px;
+  pointer-events: none;
+  background: radial-gradient(ellipse, rgba(0, 245, 255, 0.06) 0%, transparent 70%);
+  filter: blur(60px);
+}
+
+.ctaPrimary {
+  background: linear-gradient(135deg, #00f5ff 0%, #0a84ff 100%);
+  color: #050508;
+}

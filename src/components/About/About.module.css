@@ -1,0 +1,15 @@
+.quantumCardBorder {
+  border-color: rgba(0, 245, 255, 0.15);
+}
+
+.quantumIconBg {
+  background: rgba(0, 245, 255, 0.08);
+}
+
+.nonprofitCardBorder {
+  border-color: rgba(191, 90, 242, 0.15);
+}
+
+.nonprofitIconBg {
+  background: rgba(191, 90, 242, 0.08);
+}

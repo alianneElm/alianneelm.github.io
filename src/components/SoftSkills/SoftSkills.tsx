@@ -1,25 +1,17 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
-import {
-  Flame,
-  Users,
-  ClipboardCheck,
-  Sun,
-  MessageSquare,
-  RefreshCw,
-  Lightbulb,
-  Compass,
-} from 'lucide-react'
+import { Flame, Users, ClipboardCheck, Sun, MessageSquare, RefreshCw, Lightbulb, Compass } from 'lucide-react'
+import styles from './SoftSkills.module.css'
 
 const skills = [
-  { key: 'hardWorking',   Icon: Flame,           color: '#ff375f' },
-  { key: 'teamPlayer',    Icon: Users,           color: '#00f5ff' },
-  { key: 'responsible',   Icon: ClipboardCheck,  color: '#30d158' },
-  { key: 'positive',      Icon: Sun,             color: '#ff9f0a' },
-  { key: 'communicator',  Icon: MessageSquare,   color: '#bf5af2' },
-  { key: 'adaptable',     Icon: RefreshCw,       color: '#0a84ff' },
-  { key: 'problemSolver', Icon: Lightbulb,       color: '#ffd60a' },
-  { key: 'selfDriven',    Icon: Compass,         color: '#30d158' },
+  { key: 'hardWorking',   Icon: Flame,          color: '#ff375f' },
+  { key: 'teamPlayer',    Icon: Users,          color: '#00f5ff' },
+  { key: 'responsible',   Icon: ClipboardCheck, color: '#30d158' },
+  { key: 'positive',      Icon: Sun,            color: '#ff9f0a' },
+  { key: 'communicator',  Icon: MessageSquare,  color: '#bf5af2' },
+  { key: 'adaptable',     Icon: RefreshCw,      color: '#0a84ff' },
+  { key: 'problemSolver', Icon: Lightbulb,      color: '#ffd60a' },
+  { key: 'selfDriven',    Icon: Compass,        color: '#30d158' },
 ]
 
 export default function SoftSkills() {
@@ -27,13 +19,7 @@ export default function SoftSkills() {
 
   return (
     <section id="softskills" className="py-32 px-6 relative">
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse, rgba(191,90,242,0.04) 0%, transparent 70%)',
-          filter: 'blur(60px)',
-        }}
-      />
+      <div className={styles.bgAccent} />
 
       <div className="max-w-6xl mx-auto relative">
         <motion.div
@@ -45,10 +31,7 @@ export default function SoftSkills() {
           <p className="text-xs tracking-widest uppercase text-[#bf5af2]/60 mb-4">
             {t('softskills.title')}
           </p>
-          <h2
-            className="text-[clamp(2rem,5vw,3.5rem)] font-bold text-gradient-white"
-            style={{ letterSpacing: '-0.02em' }}
-          >
+          <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-bold text-gradient-white tracking-section">
             {t('softskills.subtitle')}
           </h2>
         </motion.div>

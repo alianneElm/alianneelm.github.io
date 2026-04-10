@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { Cloud } from 'lucide-react'
+import styles from './TechStack.module.css'
 
 const stack = {
   frontend: {
@@ -42,14 +43,7 @@ export default function TechStack() {
 
   return (
     <section id="stack" className="py-32 px-6 relative">
-      {/* bg accent */}
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse, rgba(0,245,255,0.03) 0%, transparent 70%)',
-          filter: 'blur(60px)',
-        }}
-      />
+      <div className={styles.bgAccent} />
 
       <div className="max-w-6xl mx-auto relative">
         <motion.div
@@ -61,10 +55,7 @@ export default function TechStack() {
           <p className="text-xs tracking-widest uppercase text-[#00f5ff]/60 mb-4">
             {t('stack.title')}
           </p>
-          <h2
-            className="text-[clamp(2rem,5vw,3.5rem)] font-bold text-gradient-white"
-            style={{ letterSpacing: '-0.02em' }}
-          >
+          <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-bold text-gradient-white tracking-section">
             {t('stack.subtitle')}
           </h2>
         </motion.div>
