@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background-color: #050508;
+    color: #e8e8f0;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  #root {
+    width: 100%;
+  }
+
+  ::selection {
+    background: rgba(0, 245, 255, 0.2);
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #050508; }
+  ::-webkit-scrollbar-thumb { background: rgba(0, 245, 255, 0.3); border-radius: 4px; }
+}
+
+@layer utilities {
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, #00f5ff 0%, #0a84ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-purple {
+    background: linear-gradient(135deg, #bf5af2 0%, #00f5ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-white {
+    background: linear-gradient(180deg, #ffffff 0%, #a0a0b0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-card {
+    background: rgba(13, 13, 20, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.12), 0 0 80px rgba(0, 245, 255, 0.04);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 30px rgba(191, 90, 242, 0.12), 0 0 80px rgba(191, 90, 242, 0.04);
+  }
+
+  .border-glow-cyan {
+    border: 1px solid rgba(0, 245, 255, 0.25);
+  }
+
+  .border-glow-purple {
+    border: 1px solid rgba(191, 90, 242, 0.25);
+  }
+}

@@ -1,0 +1,147 @@
+export const en = {
+  nav: {
+    about: 'About',
+    stack: 'Skills',
+    experience: 'Experience',
+    certifications: 'Certifications',
+    softskills: 'Soft Skills',
+    contact: 'Contact',
+  },
+  hero: {
+    role: 'Full-Stack Developer',
+    tagline: 'Building scalable systems.\nLeading technical innovation.',
+    cta: 'Explore my skills',
+    available: 'Available for assignments',
+    location: 'Malmö, Sweden',
+  },
+  about: {
+    title: 'About me',
+    body: 'Accountable Full-Stack Developer with over seven years of experience building scalable and security-critical systems. With a solid background in fintech, I have played a key role in developing business-critical features where security and integrity are the highest priority.',
+    body2: 'Structured, solution-focused and skilled at building strong relationships with both development teams and external partners. My international background gives me a unique ability to quickly adapt and lead change with a positive drive.',
+    trait1: 'Solution-focused',
+    trait2: 'Tech Lead',
+    trait3: 'Security-first',
+    trait4: 'Agile',
+    origin: 'Spain',
+    cuba: 'Cuba',
+    based: 'Malmö, Sweden',
+    quantumTitle: 'Quantum Physics & Quantum Computing',
+    quantumDesc: 'In her spare time Alianne dives deep into quantum physics and Qiskit. Her interest in next-generation computing models gives clients an early edge on tomorrow\'s technology.',
+    nonprofitTitle: 'Llego la Luz — founder',
+    nonprofitDesc: 'Since 2014, Alianne has run a non-profit providing humanitarian aid to vulnerable families in Cuba. A strong leadership profile beyond the code.',
+  },
+  stack: {
+    title: 'Technical Skills',
+    subtitle: 'Broad expertise from frontend to cloud architecture',
+    frontend: 'Frontend',
+    backend: 'Backend',
+    cloud: 'Cloud & Data',
+    databases: 'Databases',
+    devops: 'DevOps & Tools',
+    ai: 'AI & Emerging Tech',
+  },
+  experience: {
+    title: 'Experience',
+    subtitle: 'Seven years of assignments at the forefront of technology',
+    present: 'Present',
+    at: 'at',
+    roles: {
+      devoteam: {
+        company: 'Devoteam',
+        role: 'Full-Stack Developer',
+        period: 'Oct 2025 – Feb 2026',
+        location: 'Malmö',
+        summary: 'Led responsible AI implementation using LangChain, ethically trained LLM models, and built modern applications with Python, React and Next.js on Azure. Elevated company competency in generative AI.',
+      },
+      octane: {
+        company: 'Hulo Consulting / Octane (USA)',
+        role: 'Developer → Tech Lead, Fintech',
+        period: 'Jun 2022 – Sep 2025',
+        location: 'Malmö',
+        summary: 'Three years at a fast-growing US fintech. Migrated legacy systems to hexagonal architecture, optimized loan-matching Decisioning platform, and stepped up as Tech Lead for the Partner platform — owning external integrations and security-critical banking data.',
+      },
+      tedsys: {
+        company: 'Tedsys / Lagerkoll',
+        role: 'Full-Stack Developer',
+        period: 'Sep 2020 – May 2022',
+        location: 'Malmö',
+        summary: 'Modernized warehouse management systems: migrated data communication from XML to JSON, rebuilt API architecture and optimized the full Java stack from database to frontend.',
+      },
+      gualda: {
+        company: 'Gualda Comunicaciones',
+        role: 'Developer',
+        period: 'Jan 2018 – Jul 2020',
+        location: 'Logroño, Spain',
+        summary: 'Designed and built the company web platform in Java and Vue.js, increasing digital sales and customer loyalty.',
+      },
+    },
+  },
+  certifications: {
+    title: 'Certifications & Education',
+    inProgress: 'In progress',
+    valid: 'Valid until',
+    certs: [
+      { name: 'AWS Certified Cloud Practitioner', org: 'Amazon Web Services', status: 'in-progress' },
+      { name: 'SnowPro Core Certification', org: 'Snowflake', date: 'Dec 2025', valid: 'Dec 2027' },
+      { name: 'AI Level 2 – GenAI Certification', org: 'Devoteam', date: 'Oct 2025' },
+    ],
+    education: [
+      { degree: 'Systems Development in Java', school: 'Newton Vocational College', years: '2020 – 2022', country: 'Sweden' },
+      { degree: 'Theology & Philosophy', school: 'SEFOVAN', years: '2012 – 2016', country: 'Spain' },
+      { degree: 'Political Science & Swedish', school: 'Stockholm University', years: '2009 – 2012', country: 'Sweden' },
+    ],
+  },
+  softskills: {
+    title: 'Soft Skills',
+    subtitle: 'Beyond the code',
+    hardWorking: {
+      label: 'Hard-working',
+      desc: 'Consistently delivers at high quality, goes the extra mile and takes pride in every task — big or small.',
+    },
+    teamPlayer: {
+      label: 'Team player',
+      desc: 'Collaborative by nature. Actively supports teammates, shares knowledge and lifts the team as a whole.',
+    },
+    responsible: {
+      label: 'Responsible',
+      desc: 'Takes full ownership of deliverables. Follows through on commitments and handles critical systems with care.',
+    },
+    positive: {
+      label: 'Positive energy',
+      desc: 'Brings a constructive and cheerful attitude that keeps morale high — even under pressure or tight deadlines.',
+    },
+    communicator: {
+      label: 'Clear communicator',
+      desc: 'Bridges the gap between technical and non-technical stakeholders. Writes clearly, speaks with confidence.',
+    },
+    adaptable: {
+      label: 'Adaptable',
+      desc: 'Switches context fast, picks up new tools and stacks quickly, and thrives in changing environments.',
+    },
+    problemSolver: {
+      label: 'Problem solver',
+      desc: 'Approaches complexity methodically. Digs into root causes rather than patching symptoms.',
+    },
+    selfDriven: {
+      label: 'Self-driven',
+      desc: 'Takes initiative without needing direction. Sets her own priorities and keeps momentum in autonomous roles.',
+    },
+  },
+  languages: {
+    title: 'Languages',
+    list: [
+      { lang: 'Spanish', level: 'Native', pct: 100 },
+      { lang: 'Swedish', level: 'Fluent', pct: 98 },
+      { lang: 'English', level: 'Fluent', pct: 95 },
+    ],
+  },
+  cv: {
+    button: 'View CV',
+    title: 'Alianne Elm — CV 2026',
+    download: 'Download',
+  },
+  footer: {
+    role: 'Full-Stack Developer · Consid',
+    contact: 'Get in touch',
+  },
+}

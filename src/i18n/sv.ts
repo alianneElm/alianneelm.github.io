@@ -1,0 +1,147 @@
+export const sv = {
+  nav: {
+    about: 'Om mig',
+    stack: 'Kompetenser',
+    experience: 'Erfarenhet',
+    certifications: 'Certifieringar',
+    softskills: 'Mjuka kompetenser',
+    contact: 'Kontakt',
+  },
+  hero: {
+    role: 'Fullstack-utvecklare',
+    tagline: 'Bygger skalbara system.\nLeder teknisk innovation.',
+    cta: 'Se mina kompetenser',
+    available: 'Tillgänglig för uppdrag',
+    location: 'Malmö, Sverige',
+  },
+  about: {
+    title: 'Om mig',
+    body: 'Ansvarstagande Fullstack-utvecklare med över sju års erfarenhet av att bygga skalbara och säkerhetskritiska system. Med en gedigen bakgrund inom fintech har jag haft en nyckelroll i utvecklingen av affärskritiska funktioner där säkerhet och integritet är högsta prioritet.',
+    body2: 'Strukturerad, lösningsfokuserad och skicklig på att bygga goda relationer med såväl utvecklingsteam som externa partners. Min internationella erfarenhet ger mig en unik förmåga att snabbt anpassa mig och leda förändring med ett positivt driv.',
+    trait1: 'Lösningsfokuserad',
+    trait2: 'Tech Lead',
+    trait3: 'Security-first',
+    trait4: 'Agile',
+    origin: 'Spanien',
+    cuba: 'Kuba',
+    based: 'Malmö, Sverige',
+    quantumTitle: 'Kvantfysik & Quantum Computing',
+    quantumDesc: 'På fritiden fördjupar sig Alianne i kvantfysik och Qiskit. Hennes intresse för framtidens beräkningsmodeller ger teamet ett tidigt försprång i nästa generations teknik.',
+    nonprofitTitle: 'Llego la Luz — grundare',
+    nonprofitDesc: 'Sedan 2014 driver Alianne en ideell organisation som tillhandahåller humanitärt bistånd till utsatta familjer på Kuba. Stark ledarskapsprofil bortom koden.',
+  },
+  stack: {
+    title: 'Teknisk kompetens',
+    subtitle: 'Bred erfarenhet från frontend till molnarkitektur',
+    frontend: 'Frontend',
+    backend: 'Backend',
+    cloud: 'Cloud & Data',
+    databases: 'Databaser',
+    devops: 'DevOps & Tools',
+    ai: 'AI & Emerging Tech',
+  },
+  experience: {
+    title: 'Erfarenhet',
+    subtitle: 'Sju år av uppdrag i teknikens framkant',
+    present: 'Nu',
+    at: 'på',
+    roles: {
+      devoteam: {
+        company: 'Devoteam',
+        role: 'Fullstack-utvecklare',
+        period: 'Okt 2025 – Feb 2026',
+        location: 'Malmö',
+        summary: 'Drev ansvarsfull AI-implementering med LangChain, tränade LLM-modeller etiskt och byggde moderna applikationer med Python, React och Next.js i Azures ekosystem. Höjde bolagets kompetensnivå inom generativ AI.',
+      },
+      octane: {
+        company: 'Hulo Consulting / Octane (USA)',
+        role: 'Systemutvecklare → Tech Lead, Fintech',
+        period: 'Jun 2022 – Sep 2025',
+        location: 'Malmö',
+        summary: 'Tre år inom amerikanskt fintechbolag. Migrerade legacysystem till hexagonal arkitektur, optimerade Decisioning-plattformen för lånematching och klev upp som Tech Lead för Partner-plattformen med ansvar för externa integrationer och säkerhetskritisk bankdata.',
+      },
+      tedsys: {
+        company: 'Tedsys / Lagerkoll',
+        role: 'Fullstack-utvecklare',
+        period: 'Sep 2020 – Maj 2022',
+        location: 'Malmö',
+        summary: 'Moderniserade lagerhanteringssystem: migrerade datakommunikation från XML till JSON, ombyggde API-strukturen och optimerade Java-stacken från databas till frontend.',
+      },
+      gualda: {
+        company: 'Gualda Comunicaciones',
+        role: 'Utvecklare',
+        period: 'Jan 2018 – Jul 2020',
+        location: 'Logroño, Spanien',
+        summary: 'Designade och utvecklade företagets webbplattform i Java och Vue.js, vilket ökade digital försäljning och kundlojalitet.',
+      },
+    },
+  },
+  certifications: {
+    title: 'Certifieringar & Utbildning',
+    inProgress: 'Pågående',
+    valid: 'Giltig till',
+    certs: [
+      { name: 'AWS Certified Cloud Practitioner', org: 'Amazon Web Services', status: 'in-progress' },
+      { name: 'SnowPro Core Certification', org: 'Snowflake', date: 'Dec 2025', valid: 'Dec 2027' },
+      { name: 'AI Level 2 – GenAI Certification', org: 'Devoteam', date: 'Okt 2025' },
+    ],
+    education: [
+      { degree: 'Systemutveckling i Java', school: 'Newton Yrkeshögskola', years: '2020 – 2022', country: 'Sverige' },
+      { degree: 'Teologi & Filosofi', school: 'SEFOVAN', years: '2012 – 2016', country: 'Spanien' },
+      { degree: 'Statsvetenskap & Svenska', school: 'Stockholms Universitet', years: '2009 – 2012', country: 'Sverige' },
+    ],
+  },
+  softskills: {
+    title: 'Mjuka kompetenser',
+    subtitle: 'Bortom koden',
+    hardWorking: {
+      label: 'Arbetsam',
+      desc: 'Levererar konsekvent med hög kvalitet, anstränger sig det lilla extra och tar stolthet i varje uppgift — stor som liten.',
+    },
+    teamPlayer: {
+      label: 'Lagspelare',
+      desc: 'Samarbetar naturligt. Stöttar aktivt sina kollegor, delar med sig av kunskap och lyfter teamet som helhet.',
+    },
+    responsible: {
+      label: 'Ansvarsfull',
+      desc: 'Tar fullt ägarskap för sina leveranser. Håller vad hon lovar och hanterar kritiska system med omsorg.',
+    },
+    positive: {
+      label: 'Positiv energi',
+      desc: 'Bidrar med en konstruktiv och glad attityd som håller stämningen uppe — även under press eller tajta deadlines.',
+    },
+    communicator: {
+      label: 'Tydlig kommunikatör',
+      desc: 'Bygger broar mellan tekniska och icke-tekniska intressenter. Skriver tydligt och talar med självförtroende.',
+    },
+    adaptable: {
+      label: 'Anpassningsbar',
+      desc: 'Byter kontext snabbt, lär sig nya verktyg och stackar effektivt och trivs i föränderliga miljöer.',
+    },
+    problemSolver: {
+      label: 'Problemlösare',
+      desc: 'Angriper komplexitet metodiskt. Letar grundorsaker snarare än att plåstra över symptom.',
+    },
+    selfDriven: {
+      label: 'Självgående',
+      desc: 'Tar initiativ utan att behöva instruktioner. Sätter egna prioriteringar och håller tempo i självständiga roller.',
+    },
+  },
+  languages: {
+    title: 'Språk',
+    list: [
+      { lang: 'Spanska', level: 'Modersmål', pct: 100 },
+      { lang: 'Svenska', level: 'Flytande', pct: 98 },
+      { lang: 'Engelska', level: 'Flytande', pct: 95 },
+    ],
+  },
+  cv: {
+    button: 'Visa CV',
+    title: 'Alianne Elm — CV 2026',
+    download: 'Ladda ner',
+  },
+  footer: {
+    role: 'Fullstack-utvecklare · Consid',
+    contact: 'Kontakta mig',
+  },
+}
