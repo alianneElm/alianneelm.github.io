@@ -62,7 +62,7 @@ export default function Footer() {
         >
           <span>© 2026 Alianne Elm</span>
           <span className="text-gradient-cyan opacity-60">Consid</span>
-          <a href="#hero" className="hover:text-white/40 transition-colors">↑ Back to top</a>
+          <a href="#hero" className="hover:text-white/40 transition-colors">↑ {t('footer.backToTop')}</a>
         </motion.div>
       </div>
     </footer>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import type { Variants } from 'framer-motion'
@@ -15,10 +15,11 @@ const floatVariants: Variants = {
 export default function Hero() {
   const { t } = useTranslation()
   const [cvOpen, setCvOpen] = useState(false)
+  const handleCvClose = useCallback(() => setCvOpen(false), [])
 
   return (
     <>
-    <CVModal open={cvOpen} onClose={() => setCvOpen(false)} />
+    <CVModal open={cvOpen} onClose={handleCvClose} />
     <section
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6"

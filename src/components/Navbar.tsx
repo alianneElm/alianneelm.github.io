@@ -70,6 +70,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <button
             onClick={toggleLang}
+            aria-label={i18n.language === 'sv' ? 'Switch to English' : 'Byt till svenska'}
             className="text-xs font-semibold tracking-widest border-glow-cyan rounded-full px-4 py-1.5 text-[#00f5ff] hover:bg-[#00f5ff]/10 transition-all duration-200"
           >
             {i18n.language === 'sv' ? 'EN' : 'SV'}
@@ -79,6 +80,9 @@ export default function Navbar() {
           <button
             className="md:hidden text-white/60 hover:text-white"
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
               {menuOpen ? (
@@ -95,6 +99,7 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
+            id="mobile-menu"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}

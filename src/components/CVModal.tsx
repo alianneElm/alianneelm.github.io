@@ -14,11 +14,12 @@ export default function CVModal({ open, onClose }: CVModalProps) {
   useEffect(() => {
     if (!open) return
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
+    const prevOverflow = document.body.style.overflow
     document.addEventListener('keydown', onKey)
     document.body.style.overflow = 'hidden'
     return () => {
       document.removeEventListener('keydown', onKey)
-      document.body.style.overflow = ''
+      document.body.style.overflow = prevOverflow
     }
   }, [open, onClose])
 

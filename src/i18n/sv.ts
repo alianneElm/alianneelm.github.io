@@ -80,6 +80,8 @@ export const sv = {
     title: 'Certifieringar & Utbildning',
     inProgress: 'Pågående',
     valid: 'Giltig till',
+    certsLabel: 'Certifieringar',
+    educationLabel: 'Utbildning',
     certs: [
       { name: 'AWS Certified Cloud Practitioner', org: 'Amazon Web Services', status: 'in-progress' },
       { name: 'SnowPro Core Certification', org: 'Snowflake', date: 'Dec 2025', valid: 'Dec 2027' },
@@ -143,5 +145,6 @@ export const sv = {
   footer: {
     role: 'Fullstack-utvecklare · Consid',
     contact: 'Kontakta mig',
+    backToTop: 'Till toppen',
   },
 }

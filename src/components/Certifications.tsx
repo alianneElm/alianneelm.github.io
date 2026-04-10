@@ -4,12 +4,14 @@ import { Clock, CheckCircle2, GraduationCap } from 'lucide-react'
 
 export default function Certifications() {
   const { t } = useTranslation()
-  const certs = t('certifications.certs', { returnObjects: true }) as Array<{
+  const certsRaw = t('certifications.certs', { returnObjects: true })
+  const educationRaw = t('certifications.education', { returnObjects: true })
+  const certs = Array.isArray(certsRaw) ? certsRaw as Array<{
     name: string; org: string; date?: string; valid?: string; status?: string
-  }>
-  const education = t('certifications.education', { returnObjects: true }) as Array<{
+  }> : []
+  const education = Array.isArray(educationRaw) ? educationRaw as Array<{
     degree: string; school: string; years: string; country: string
-  }>
+  }> : []
 
   return (
     <section id="certifications" className="py-32 px-6 relative">
@@ -42,11 +44,11 @@ export default function Certifications() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Certifications */}
           <div>
-            <p className="text-xs tracking-widest uppercase text-[#bf5af2]/60 mb-6">Certifications</p>
+            <p className="text-xs tracking-widest uppercase text-[#bf5af2]/60 mb-6">{t('certifications.certsLabel')}</p>
             <div className="flex flex-col gap-4">
               {certs.map((cert, i) => (
                 <motion.div
-                  key={i}
+                  key={`${cert.name}-${cert.org}`}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -88,11 +90,11 @@ export default function Certifications() {
 
           {/* Education */}
           <div>
-            <p className="text-xs tracking-widest uppercase text-[#00f5ff]/60 mb-6">Education</p>
+            <p className="text-xs tracking-widest uppercase text-[#00f5ff]/60 mb-6">{t('certifications.educationLabel')}</p>
             <div className="flex flex-col gap-4">
               {education.map((edu, i) => (
                 <motion.div
-                  key={i}
+                  key={`${edu.degree}-${edu.school}`}
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
