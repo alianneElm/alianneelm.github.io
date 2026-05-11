@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -7,8 +8,9 @@ import Certifications from './components/Certifications'
 import SoftSkills from './components/SoftSkills'
 import Languages from './components/Languages'
 import Footer from './components/Footer'
+import CVGeneratorPage from './pages/CVGeneratorPage'
 
-export default function App() {
+function MainPage() {
   return (
     <div className="min-h-screen" style={{ background: '#050508' }}>
       <Navbar />
@@ -21,5 +23,14 @@ export default function App() {
       <Languages />
       <Footer />
     </div>
+  )
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/cv" element={<CVGeneratorPage />} />
+    </Routes>
   )
 }

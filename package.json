@@ -10,13 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.95.1",
     "@tailwindcss/vite": "^4.2.2",
+    "@types/react-router-dom": "^5.3.3",
+    "dotenv": "^17.4.2",
     "framer-motion": "^12.38.0",
     "i18next": "^26.0.4",
     "lucide-react": "^1.8.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-i18next": "^17.0.2",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.15.0",
+    "react-to-print": "^3.3.0",
+    "remark-gfm": "^4.0.1",
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
@@ -24,6 +31,7 @@
     "@types/node": "^24.12.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@vercel/node": "^5.7.17",
     "@vitejs/plugin-react": "^6.0.1",
     "eslint": "^9.39.4",
     "eslint-plugin-react-hooks": "^7.0.1",

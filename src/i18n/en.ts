@@ -142,6 +142,13 @@ export const en = {
     title: 'Alianne Elm — CV 2026',
     download: 'Download',
   },
+  chat: {
+    title: "Alianne's AI Assistant",
+    subtitle: 'Ask me about her profile',
+    intro: "Hi! I'm Alianne's AI assistant. Tell me what you're looking for — a backend developer, a tech lead, someone with AI experience? I'll help you decide if Alianne is the right fit.",
+    placeholder: "Ask a question about Alianne's skills…",
+    errorMsg: 'Something went wrong. Please try again in a moment.',
+  },
   footer: {
     role: 'Full-Stack Developer · Consid',
     contact: 'Get in touch',

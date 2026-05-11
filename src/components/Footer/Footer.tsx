@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { FileText } from 'lucide-react'
 import styles from './Footer.module.css'
 
 export default function Footer() {
@@ -29,16 +31,25 @@ export default function Footer() {
 
           <p className="text-white/40 mb-10 text-lg">{t('footer.role')}</p>
 
-          <a
-            href="mailto:alianne.elm@consid.se"
-            className={`${styles.ctaPrimary} inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full font-semibold text-base tracking-wide transition-all duration-300 glow-cyan`}
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            alianne.elm@consid.se
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="mailto:alianne.elm@consid.se"
+              className={`${styles.ctaPrimary} inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full font-semibold text-base tracking-wide transition-all duration-300 glow-cyan`}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              alianne.elm@consid.se
+            </a>
+            <Link
+              to="/cv"
+              className="inline-flex items-center justify-center gap-2 px-8 py-5 rounded-full font-semibold text-base tracking-wide transition-all duration-300 border border-[#00f5ff]/20 text-[#00f5ff]/70 hover:text-[#00f5ff] hover:border-[#00f5ff]/50 hover:bg-[#00f5ff]/5"
+            >
+              <FileText size={16} strokeWidth={1.5} />
+              Generera anpassat CV
+            </Link>
+          </div>
         </motion.div>
 
         <motion.div
