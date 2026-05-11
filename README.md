@@ -1,73 +1,106 @@
-# React + TypeScript + Vite
+# Alianne Elm — Professional Profile Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal profile site for Alianne Elm, consultant at [Consid](https://consid.se). Built for sales teams and potential clients to quickly assess fit for roles and generate tailored CVs.
 
-Currently, two official plugins are available:
+**Live:** [alianneelm-page.vercel.app](https://alianneelm-page.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **AI chatbot** — powered by Claude (Anthropic), answers questions about Alianne's experience, skills and role fit in Swedish or English
+- **CV generator** — paste a job description, get a tailored PDF CV in Consid's template with AI-generated summaries
+- **Bilingual** — Swedish / English via i18next
+- **Dark cyberpunk design** — Apple-inspired glassmorphism aesthetic
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Layer | Technologies |
+|---|---|
+| Frontend | React 19, TypeScript, Vite, Tailwind CSS v4 |
+| Routing | React Router v7 |
+| Animation | Framer Motion |
+| AI | Anthropic Claude (`claude-haiku-4-5`) via `@anthropic-ai/sdk` |
+| PDF | react-to-print |
+| Markdown | react-markdown + remark-gfm |
+| Icons | lucide-react |
+| Hosting | Vercel (frontend + serverless functions) |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Project Structure
+
+```
+├── api/                        # Vercel serverless functions (self-contained)
+│   ├── chat.ts                 # POST /api/chat — AI chatbot
+│   └── generate-cv.ts          # POST /api/generate-cv — CV generation
+├── src/
+│   ├── components/
+│   │   ├── HeroChat.tsx        # Chat UI with icon markers
+│   │   ├── CVDocument/         # Printable CV (A4, Consid template)
+│   │   └── CVRequestModal/     # Modal for entering job description
+│   ├── lib/
+│   │   ├── systemPrompt.ts     # AI instructions + Alianne's full profile
+│   │   ├── cvData.ts           # CV content (experiences, certs, education)
+│   │   └── chatHandler.ts      # Shared chat logic (used in dev via vite.config)
+│   ├── pages/
+│   │   ├── HomePage.tsx        # Main profile page
+│   │   └── CVGeneratorPage.tsx # CV preview + print page
+│   └── i18n/                   # Swedish / English translations
+├── public/
+│   ├── profile.jpg             # Profile photo
+│   └── consid-logo.svg         # Consid logo
+├── vite.config.ts              # Dev server with /api middleware
+└── vercel.json                 # Vercel deployment config
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Local Development
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+**1. Clone and install**
+```bash
+git clone https://github.com/alianneelm/alianne_page.git
+cd alianne_page
+npm install
 ```
+
+**2. Add your API key**
+```bash
+# Create .env.local (gitignored)
+echo "ANTHROPIC_API_KEY=sk-ant-..." > .env.local
+```
+
+**3. Run dev server**
+```bash
+npm run dev
+```
+
+The dev server proxies `/api/chat` and `/api/generate-cv` through Vite middleware — no separate backend needed locally.
+
+---
+
+## Deployment (Vercel)
+
+1. Push to GitHub
+2. Import the repo in [vercel.com](https://vercel.com)
+3. Add environment variable: `ANTHROPIC_API_KEY` = your Anthropic key
+4. Deploy — Vercel auto-detects the Vite frontend and TypeScript serverless functions in `/api/`
+
+> **Important:** Each file in `api/` must be self-contained (no imports from `src/`). Vercel's ESM bundler does not resolve cross-directory local imports at runtime.
+
+---
+
+## Updating the AI Profile
+
+Edit `src/lib/systemPrompt.ts` to update what the chatbot knows about Alianne. The same file is mirrored inline in `api/chat.ts` for production — keep both in sync when making changes.
+
+Restart the dev server after editing: `npm run dev`
+
+---
+
+## Updating the CV Content
+
+Edit `src/lib/cvData.ts` to update experiences, certifications, education and languages shown in the generated PDF.
