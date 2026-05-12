@@ -13,11 +13,11 @@ interface Message {
 
 // Map text markers → lucide icon + color
 const MARKER_MAP: Record<string, { icon: ReactNode; color: string }> = {
-  '[check]': { icon: <CheckCircle2 size={13} strokeWidth={2} />, color: '#30d158' },
-  '[warn]':  { icon: <AlertTriangle size={13} strokeWidth={2} />, color: '#ff9f0a' },
-  '[info]':  { icon: <Info size={13} strokeWidth={2} />,         color: 'rgba(255,255,255,0.4)' },
-  '[star]':  { icon: <Star size={13} strokeWidth={2} />,         color: '#00f5ff' },
-  '[bonus]': { icon: <Sparkles size={13} strokeWidth={2} />,     color: '#bf5af2' },
+  '[check]': { icon: <CheckCircle2 size={13} strokeWidth={2} />, color: '#68d130' },
+  '[warn]':  { icon: <AlertTriangle size={13} strokeWidth={2} />, color: '#ffce0a' },
+  '[info]':  { icon: <Info size={13} strokeWidth={2} />,         color: 'rgba(255, 255, 255, 0.47)' },
+  '[star]':  { icon: <Star size={13} strokeWidth={2} />,         color: '#28f874' },
+  '[bonus]': { icon: <Sparkles size={13} strokeWidth={2} />,     color: '#ec66f4' },
 }
 
 // Detect and strip a leading marker from a text string
