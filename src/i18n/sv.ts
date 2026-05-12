@@ -16,7 +16,7 @@ export const sv = {
   },
   about: {
     title: 'Om mig',
-    body: 'Ansvarstagande Fullstack-utvecklare med över sju års erfarenhet av att bygga skalbara och säkerhetskritiska system. Med en gedigen bakgrund inom fintech har jag haft en nyckelroll i utvecklingen av affärskritiska funktioner där säkerhet och integritet är högsta prioritet.',
+    body: 'Ansvarstagande Fullstack-utvecklare med 8 års erfarenhet av att bygga skalbara och säkerhetskritiska system. Med en gedigen bakgrund inom fintech har jag haft en nyckelroll i utvecklingen av affärskritiska funktioner där säkerhet och integritet är högsta prioritet.',
     body2: 'Strukturerad, lösningsfokuserad och skicklig på att bygga goda relationer med såväl utvecklingsteam som externa partners. Min internationella erfarenhet ger mig en unik förmåga att snabbt anpassa mig och leda förändring med ett positivt driv.',
     trait1: 'Lösningsfokuserad',
     trait2: 'Tech Lead',

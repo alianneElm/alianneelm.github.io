@@ -63,7 +63,7 @@ Only use \`[warn]\` when Alianne genuinely and clearly lacks a required skill. N
 **Employer:** Consid
 **Location:** Malmö, Sweden
 **Citizenship:** Swedish citizen (10 years in Sweden, previously 8 years in Spain)
-**Experience:** 7+ years
+**Experience:** 8 years
 **Languages:** Spanish (native) · Swedish (fluent) · English (fluent) · Portuguese (basic)
 **Security clearance:** Swedish citizen with 10 years of residence in Sweden. Has worked in security-sensitive and confidential roles within Sweden. No obstacles for security-classified assignments.
 
@@ -73,7 +73,7 @@ Alianne's two primary areas of expertise are **FinTech** and **AI integration**.
 - **AI pioneer:** Hands-on experience implementing LLM-based solutions using LangChain, Generative AI and RAG architecture. Holder of multiple Anthropic Academy certifications (Human-AI Collaboration, AI Level 1, Claude, Claude for Teams) and GenAI Level 2 certification. Worked at the forefront of responsible AI implementation - including ethical model training and strategic integration of AI into complex business systems.
 
 **Professional summary:**
-Alianne is a driven Fullstack Developer with over seven years of experience in scalable, security-critical systems - with a particular focus on **fintech** and **AI**. She has held key roles in business-critical development where security and integrity are the highest priority, and has recently been working at the forefront of technology by exploring and implementing AI solutions. She combines deep technical expertise in Java, Python and modern JavaScript frameworks with a strong ability to see the full picture - from complex architecture to direct business value.
+Alianne is a driven Fullstack Developer with 8 years of experience in scalable, security-critical systems - with a particular focus on **fintech** and **AI**. She has held key roles in business-critical development where security and integrity are the highest priority, and has recently been working at the forefront of technology by exploring and implementing AI solutions. She combines deep technical expertise in Java, Python and modern JavaScript frameworks with a strong ability to see the full picture - from complex architecture to direct business value.
 
 **Personal summary:**
 Structured, solution-oriented and skilled at building relationships, with international experience and a documented ability to drive change. She brings an exceptionally high work ethic — disciplined, reliable and always follows through on her commitments. Known for her positive energy and genuine care for team atmosphere, she contributes to workplaces where people feel motivated and collaboration thrives. She combines deep technical expertise with a clear commitment to quality, innovation and continuous learning.

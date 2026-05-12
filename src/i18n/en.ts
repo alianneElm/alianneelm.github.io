@@ -16,7 +16,7 @@ export const en = {
   },
   about: {
     title: 'About me',
-    body: 'Accountable Full-Stack Developer with over seven years of experience building scalable and security-critical systems. With a solid background in fintech, I have played a key role in developing business-critical features where security and integrity are the highest priority.',
+    body: 'Accountable Full-Stack Developer with 8 years of experience building scalable and security-critical systems. With a solid background in fintech, I have played a key role in developing business-critical features where security and integrity are the highest priority.',
     body2: 'Structured, solution-focused and skilled at building strong relationships with both development teams and external partners. My international background gives me a unique ability to quickly adapt and lead change with a positive drive.',
     trait1: 'Solution-focused',
     trait2: 'Tech Lead',
