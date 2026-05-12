@@ -67,21 +67,13 @@ function TechPills({ tech }: { tech: string }) {
   )
 }
 
-// ─── Page header (repeats on every page) ─────────────────────────────────────
-function PageHeader({ seller }: { seller?: SellerInfo }) {
+const LIGHT_BEIGE = '#f5f0ed'
+
+// ─── Logo-only header (subsequent pages) ─────────────────────────────────────
+function PageHeader() {
   return (
-    <div style={{
-      display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
-      marginBottom: '24px',
-    }}>
-      <img src="/consid-logo.svg" alt="Consid" style={{ height: '28px' }} />
-      {seller?.name && (
-        <div style={{ textAlign: 'right', lineHeight: 1.5 }}>
-          <p style={{ fontSize: '10px', fontWeight: 700, color: '#1a1a1a', margin: 0 }}>{seller.name}</p>
-          {seller.email && <p style={{ fontSize: '9px', color: BURGUNDY, margin: 0 }}>{seller.email}</p>}
-          {seller.phone && <p style={{ fontSize: '9px', color: BURGUNDY, margin: 0 }}>{seller.phone}</p>}
-        </div>
-      )}
+    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+      <img src="/consid-logo.svg" alt="Consid" style={{ height: '26px' }} />
     </div>
   )
 }
@@ -101,26 +93,53 @@ function CoverPage({ summary, roleTitle, competencies, seller, editMode }: {
     <div style={{
       width: PAGE_W, minHeight: '297mm', background: '#fff',
       pageBreakAfter: 'always', breakAfter: 'page', boxSizing: 'border-box',
-      padding: '32px 38px',
+      display: 'flex', flexDirection: 'column',
     }}>
-      <PageHeader seller={seller} />
+      {/* ── Header strip: light beige, logo + seller info ── */}
+      <div style={{
+        background: LIGHT_BEIGE,
+        padding: '18px 38px',
+        display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
+        flexShrink: 0,
+      }}>
+        <img src="/consid-logo.svg" alt="Consid" style={{ height: '28px' }} />
+        {seller?.name && (
+          <div style={{ textAlign: 'right', lineHeight: 1.5 }}>
+            <p style={{ fontSize: '10px', fontWeight: 700, color: '#1a1a1a', margin: 0 }}>{seller.name}</p>
+            {seller.email && <p style={{ fontSize: '9px', color: BURGUNDY, margin: 0 }}>{seller.email}</p>}
+            {seller.phone && <p style={{ fontSize: '9px', color: BURGUNDY, margin: 0 }}>{seller.phone}</p>}
+          </div>
+        )}
+      </div>
 
-      {/* Two-column layout */}
-      <div style={{ display: 'flex', gap: '28px', alignItems: 'flex-start' }}>
+      {/* ── Two-column body ── */}
+      <div style={{ display: 'flex', flex: 1 }}>
 
-        {/* Left column: photo + competencies */}
-        <div style={{ width: '160px', minWidth: '160px', flexShrink: 0 }}>
+        {/* Left column: burgundy background, photo + competencies */}
+        <div style={{
+          width: '175px', minWidth: '175px', flexShrink: 0,
+          background: BURGUNDY,
+          padding: '24px 18px',
+          display: 'flex', flexDirection: 'column',
+        }}>
           <img
             src="/profile.jpg" alt="Alianne Elm"
-            style={{ width: '160px', height: '200px', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
+            style={{ width: '139px', height: '185px', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
           />
           {competencyCategories.length > 0 && (
-            <div style={{ marginTop: '18px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
               {competencyCategories.map(cat => (
                 <div key={cat.label}>
-                  <p style={{ fontSize: '10px', fontWeight: 700, color: BURGUNDY, margin: '0 0 4px 0' }}>{cat.label}</p>
+                  <p style={{
+                    fontSize: '8.5px', fontWeight: 700, color: '#fff',
+                    margin: '0 0 5px 0', textTransform: 'uppercase', letterSpacing: '0.6px',
+                  }}>
+                    {cat.label}
+                  </p>
                   {cat.items.map((item, i) => (
-                    <p key={i} style={{ fontSize: '9px', color: '#333', margin: '0 0 2px 0', lineHeight: 1.4 }}>{item}</p>
+                    <p key={i} style={{ fontSize: '8.5px', color: 'rgba(255,255,255,0.82)', margin: '0 0 3px 0', lineHeight: 1.5 }}>
+                      {item}
+                    </p>
                   ))}
                 </div>
               ))}
@@ -129,8 +148,8 @@ function CoverPage({ summary, roleTitle, competencies, seller, editMode }: {
         </div>
 
         {/* Right column: name + role + summary */}
-        <div style={{ flex: 1 }}>
-          <h1 style={{ fontSize: '38px', fontWeight: 300, color: '#1a1a1a', margin: '0 0 4px 0', lineHeight: 1.1, letterSpacing: '-0.5px' }}>
+        <div style={{ flex: 1, padding: '32px 32px 32px 28px' }}>
+          <h1 style={{ fontSize: '36px', fontWeight: 300, color: '#1a1a1a', margin: '0 0 4px 0', lineHeight: 1.1, letterSpacing: '-0.5px' }}>
             Alianne Elm
           </h1>
           <E tag="p" editMode={editMode} style={{ fontSize: '13px', fontWeight: 700, color: BURGUNDY, margin: '0 0 18px 0' }}>
@@ -191,9 +210,9 @@ function ExpEntry({ exp, highlight, editMode }: { exp: Experience; highlight?: s
 
 // ─── Printable section (table so header repeats on print) ────────────────────
 function PrintableSection({
-  title, children, seller, breakBefore = false,
+  title, children, breakBefore = false,
 }: {
-  title?: string; children: React.ReactNode; seller?: SellerInfo; breakBefore?: boolean
+  title?: string; children: React.ReactNode; breakBefore?: boolean
 }) {
   return (
     <table style={{
@@ -205,7 +224,7 @@ function PrintableSection({
       <thead>
         <tr>
           <td style={{ padding: '28px 38px 12px 38px' }}>
-            <PageHeader seller={seller} />
+            <PageHeader />
             {title && (
               <h2 style={{
                 fontSize: '18px', fontWeight: 700, color: '#1a1a1a',
@@ -237,11 +256,11 @@ function PrintableSection({
 }
 
 // ─── Experiences section ──────────────────────────────────────────────────────
-function ExperienceSection({ experiences, experienceHighlights, seller, editMode }: {
-  experiences: Experience[]; experienceHighlights?: Record<string, string>; seller?: SellerInfo; editMode?: boolean
+function ExperienceSection({ experiences, experienceHighlights, editMode }: {
+  experiences: Experience[]; experienceHighlights?: Record<string, string>; editMode?: boolean
 }) {
   return (
-    <PrintableSection title="Projekt och uppdrag" seller={seller}>
+    <PrintableSection title="Projekt och uppdrag">
       {experiences.map(exp => (
         <ExpEntry key={exp.id} exp={exp} highlight={experienceHighlights?.[exp.id]} editMode={editMode} />
       ))}
@@ -250,9 +269,9 @@ function ExperienceSection({ experiences, experienceHighlights, seller, editMode
 }
 
 // ─── Certs + Education + Nonprofit ───────────────────────────────────────────
-function CertsSection({ seller, editMode }: { seller?: SellerInfo; editMode?: boolean }) {
+function CertsSection({ editMode }: { editMode?: boolean }) {
   return (
-    <PrintableSection seller={seller} breakBefore>
+    <PrintableSection breakBefore>
       <div style={{ marginBottom: '20px', pageBreakInside: 'avoid', breakInside: 'avoid' }}>
         <p style={{ fontSize: '10px', fontWeight: 700, color: '#1a1a1a', margin: '0 0 1px 0' }}>{NONPROFIT.company}</p>
         <p style={{ fontSize: '9px', color: '#777', margin: '0 0 6px 0' }}>{NONPROFIT.period}</p>
@@ -293,9 +312,9 @@ function CertsSection({ seller, editMode }: { seller?: SellerInfo; editMode?: bo
 }
 
 // ─── Languages ───────────────────────────────────────────────────────────────
-function LanguagesSection({ seller }: { seller?: SellerInfo }) {
+function LanguagesSection() {
   return (
-    <PrintableSection seller={seller} breakBefore title="Språk">
+    <PrintableSection breakBefore title="Språk">
       {LANGUAGES.map((l, i) => (
         <div key={i} style={{
           display: 'flex', gap: '36px', alignItems: 'center',
@@ -369,9 +388,9 @@ export default function CVDocument({
       `}</style>
       <div id="cv-document" style={{ fontFamily: 'Arial, Helvetica, sans-serif', background: '#fff' }}>
         <CoverPage summary={summary} roleTitle={roleTitle} competencies={competencies} seller={seller} editMode={editMode} />
-        <ExperienceSection experiences={ordered} experienceHighlights={experienceHighlights} seller={seller} editMode={editMode} />
-        <CertsSection seller={seller} editMode={editMode} />
-        <LanguagesSection seller={seller} />
+        <ExperienceSection experiences={ordered} experienceHighlights={experienceHighlights} editMode={editMode} />
+        <CertsSection editMode={editMode} />
+        <LanguagesSection />
         <ConsidPage />
       </div>
     </>
