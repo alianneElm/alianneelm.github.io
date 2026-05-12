@@ -285,23 +285,32 @@ function CertsSection({ editMode }: { editMode?: boolean }) {
 
       <div style={{ borderTop: '1px solid #e8e8e8', margin: '4px 0 16px 0' }} />
 
-      <h2 style={{ fontSize: '14px', fontWeight: 700, color: '#1a1a1a', margin: '0 0 10px 0' }}>Kurser och Certifieringar</h2>
+      <h2 style={{ fontSize: '14px', fontWeight: 700, color: '#1a1a1a', margin: '0 0 6px 0' }}>Kurser och Certifieringar</h2>
       {CERTIFICATIONS.map((cert, i) => (
-        <E key={i} tag="p" editMode={editMode} style={{
-          fontSize: '9.5px', color: '#333', margin: '0 0 5px 0', lineHeight: 1.55,
-          paddingLeft: '11px', borderLeft: `2px solid ${BURGUNDY}`,
+        <div key={i} style={{
+          display: 'flex', alignItems: 'flex-start', gap: '16px',
+          padding: '8px 10px',
+          background: i % 2 === 0 ? LIGHT_BEIGE : '#fff',
+          pageBreakInside: 'avoid', breakInside: 'avoid',
         }}>
-          {cert}
-        </E>
+          <span style={{ fontSize: '9px', color: '#333', lineHeight: 1.55 }}>{cert}</span>
+        </div>
       ))}
 
-      <div style={{ borderTop: '1px solid #e8e8e8', margin: '16px 0' }} />
+      <div style={{ borderTop: '1px solid #e8e8e8', margin: '16px 0 10px 0' }} />
 
-      <h2 style={{ fontSize: '14px', fontWeight: 700, color: '#1a1a1a', margin: '0 0 10px 0' }}>Utbildningar</h2>
+      <h2 style={{ fontSize: '14px', fontWeight: 700, color: '#1a1a1a', margin: '0 0 6px 0' }}>Utbildningar</h2>
       {EDUCATION.map((edu: Education, i: number) => (
-        <div key={i} style={{ display: 'flex', gap: '24px', marginBottom: '9px', pageBreakInside: 'avoid', breakInside: 'avoid' }}>
-          <span style={{ fontSize: '9.5px', fontWeight: 700, color: '#1a1a1a', minWidth: '76px' }}>{edu.period}</span>
-          <div>
+        <div key={i} style={{
+          display: 'flex', gap: '0', alignItems: 'stretch',
+          background: i % 2 === 0 ? LIGHT_BEIGE : '#fff',
+          pageBreakInside: 'avoid', breakInside: 'avoid',
+        }}>
+          <span style={{
+            fontSize: '9.5px', fontWeight: 700, color: '#1a1a1a',
+            minWidth: '100px', padding: '8px 10px', flexShrink: 0,
+          }}>{edu.period}</span>
+          <div style={{ padding: '8px 10px' }}>
             <p style={{ fontSize: '9.5px', fontWeight: 700, margin: 0, color: '#1a1a1a' }}>{edu.degree}</p>
             <p style={{ fontSize: '9px', color: '#666', margin: '2px 0 0 0' }}>{edu.school}</p>
           </div>
@@ -317,12 +326,12 @@ function LanguagesSection() {
     <PrintableSection breakBefore title="Språk">
       {LANGUAGES.map((l, i) => (
         <div key={i} style={{
-          display: 'flex', gap: '36px', alignItems: 'center',
-          padding: '9px 0', borderBottom: '1px solid #f0f0f0',
+          display: 'flex', alignItems: 'center',
+          background: i % 2 === 0 ? LIGHT_BEIGE : '#fff',
           pageBreakInside: 'avoid', breakInside: 'avoid',
         }}>
-          <span style={{ fontSize: '10.5px', fontWeight: 700, color: '#1a1a1a', minWidth: '90px' }}>{l.lang}</span>
-          <span style={{ fontSize: '10.5px', color: '#555' }}>{l.level}</span>
+          <span style={{ fontSize: '10px', fontWeight: 700, color: '#1a1a1a', minWidth: '130px', padding: '9px 10px' }}>{l.lang}</span>
+          <span style={{ fontSize: '10px', color: '#555', padding: '9px 10px' }}>{l.level}</span>
         </div>
       ))}
     </PrintableSection>
