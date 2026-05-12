@@ -164,12 +164,24 @@ export default function HeroChat() {
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const messagesContainerRef = useRef<HTMLDivElement>(null)
+  const lastAssistantRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
-  // Scroll only within the chat container — never the page
   useEffect(() => {
-    const el = messagesContainerRef.current
-    if (el) el.scrollTop = el.scrollHeight
+    const container = messagesContainerRef.current
+    if (!container) return
+
+    if (loading) {
+      // User just sent — scroll to bottom to show the loading dots
+      container.scrollTop = container.scrollHeight
+    } else if (messages.length > 0 && messages[messages.length - 1].role === 'assistant') {
+      // New assistant response — scroll to show the TOP of the message
+      const el = lastAssistantRef.current
+      if (el) {
+        const offset = el.getBoundingClientRect().top - container.getBoundingClientRect().top
+        container.scrollTop = container.scrollTop + offset - 16
+      }
+    }
   }, [messages, loading])
 
   const send = async () => {
@@ -266,9 +278,12 @@ export default function HeroChat() {
 
           {/* Conversation */}
           <AnimatePresence initial={false}>
-            {messages.map((msg, i) => (
+            {messages.map((msg, i) => {
+              const isLastAssistant = msg.role === 'assistant' && i === messages.length - 1
+              return (
               <motion.div
                 key={i}
+                ref={isLastAssistant ? lastAssistantRef : undefined}
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
@@ -300,7 +315,8 @@ export default function HeroChat() {
                   }
                 </div>
               </motion.div>
-            ))}
+              )
+            })}
           </AnimatePresence>
 
           {/* Typing indicator */}
