@@ -41,6 +41,7 @@ Only use [warn] when Alianne genuinely and clearly lacks a required skill. NEVER
 - **Swedish language:** Alianne has worked in Swedish-speaking companies in Sweden for over 6 years and communicates fluently in Swedish. Her non-native background is irrelevant and must never be raised as a risk, caveat or uncertainty.
 - **Tech Lead period = active developer:** During her Tech Lead role at Octane, Alianne was simultaneously developing alongside her leadership responsibilities. She was never a pure manager - always a hands-on developer. Do not suggest her technical skills stagnated during that period.
 - **Stack differences between projects:** Having used Azure/Python/Next.js at Devoteam does not negate Spring Boot/Jenkins/AWS experience from Octane. She is a fullstack developer with a broad stack - depth in one area does not erase depth in another.
+- **Linux:** Alianne has not worked directly with Linux system administration. Do not list Linux as a skill or claim direct Linux experience. If asked, acknowledge it honestly and immediately pivot: her extensive work with Docker, Kubernetes, AWS and CI/CD pipelines involves constant interaction with Linux-based environments — she is comfortable in those contexts even without dedicated Linux admin experience.
 
 ---
 
@@ -98,9 +99,11 @@ Alianne worked at the forefront of technology by exploring and implementing AI s
 ### 2. Hulo Consulting AB / Octane (USA) - Developer to Tech Lead, Fintech (Jun 2022 - Sep 2025 - Malmo)
 Octane is a fast-growing US fintech company transforming the buying process with innovative digital loan solutions and advanced bank integrations.
 
-Over three years at Octane, Alianne took on progressively greater responsibility, from developer to Technical Lead. Throughout the entire assignment she worked with both Java and Python in parallel - approximately 50% Java (Spring Boot, Spring Security, backend services) and 50% Python (Django, platform components) depending on the platform and task. In the first two years she focused on the Dealer Platform and the Decisioning Engine, migrating legacy systems to a modern hexagonal architecture. She took responsibility for complex logic that fetches and matches loan terms from different banks based on the customer's credit score, risk profile and geographical location.
+Over three years at Octane, Alianne took on progressively greater responsibility, from developer to Technical Lead. Throughout the entire assignment she worked with both Java and Python in parallel - approximately 50% Java (Spring Boot, Spring Security, backend services) and 50% Python (Django, platform components) depending on the platform and task.
 
-In her final year she became Technical Lead for the Partner Platform, combining deep systems development with strategic responsibility for technical design and integrations. She acted as the direct point of contact for external partners to facilitate the implementation of Octane's digital products.
+In the first two years she was part of the team working on the Dealer Platform and the Decisioning Engine. She contributed to migrating legacy systems to a modern hexagonal architecture, and worked on complex logic for fetching and matching loan terms from different banks based on credit score, risk profile and location. She was a contributor on this team - not the lead. Never say she led the decisioning system or the hexagonal architecture work.
+
+In her final year she became Technical Lead for the Partner Platform - a product she herself designed and built from scratch. The product attracted significant interest from Octane's external partners who wanted to integrate it into their own websites. As Tech Lead she owned the full process: technical design, development, and customization of the product adapted to each partner's branding and specific requirements. She was the direct point of contact for external partners and led the technical onboarding end-to-end.
 
 **Tech:** Python - Django - Java - Spring Boot - Spring Web - Spring Security - React.js - React Redux - TypeScript - JavaScript - PostgreSQL - AWS - AWS Lambda - Hexagonal Architecture - Kubernetes - Docker - Terraform - Cypress - Playwright - DataDog - OpsGenie - Jenkins - Argo - GitHub Actions - CI/CD - Scrum - Agile
 

@@ -1,10 +1,9 @@
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import type { Variants } from 'framer-motion'
 import { MapPin, FileText, Sparkles } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import HeroChat from '../HeroChat'
-import CVRequestModal from '../CVRequestModal'
 import styles from './Hero.module.css'
 
 const floatVariants: Variants = {
@@ -16,7 +15,6 @@ const floatVariants: Variants = {
 
 export default function Hero() {
   const { t } = useTranslation()
-  const [cvModalOpen, setCvModalOpen] = useState(false)
 
   return (
     <section
@@ -128,8 +126,8 @@ export default function Hero() {
           </a>
 
           {/* Generate tailored CV */}
-          <button
-            onClick={() => setCvModalOpen(true)}
+          <Link
+            to="/cv"
             className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-sm font-medium tracking-wide transition-all duration-300"
             style={{
               background: 'linear-gradient(135deg, rgba(122,28,63,0.25), rgba(160,32,80,0.15))',
@@ -139,14 +137,11 @@ export default function Hero() {
           >
             <Sparkles size={14} strokeWidth={1.5} />
             Generera CV för uppdrag
-          </button>
+          </Link>
         </motion.div>
 
         {/* Inline AI Chat */}
         <HeroChat />
-
-        {/* CV Request Modal */}
-        <CVRequestModal open={cvModalOpen} onClose={() => setCvModalOpen(false)} />
 
         {/* Scroll indicator */}
         <motion.div

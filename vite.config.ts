@@ -67,6 +67,8 @@ Available experience IDs: devoteam, octane, tedsys, gualda, encaprichate
 
 Rules:
 - Write in Swedish
+- Always write in THIRD PERSON — use "hon", "Alianne", "hennes" — never "jag", "mig" or "min"
+  Example: "Alianne har 8 års erfarenhet av..." / "Hon kombinerar..." / "Hennes bakgrund inom..."
 - Never exaggerate — only claim Tech Lead for the Octane Partner Platform role
 - Use "hade ansvar för", "arbetade med", "bidrog till" — not "ledde" unless explicitly the Octane Tech Lead role
 - Be concise and sales-oriented
@@ -79,8 +81,12 @@ Respond ONLY with valid JSON:
     "personal": "string (2-3 sentences about personality and soft skills)",
     "bonus": "string (1-2 sentences about passion for learning or non-profit)"
   },
-  "highlightedExperiences": ["array of experience IDs, max 3, most relevant first"]
-}`
+  "highlightedExperiences": ["array of experience IDs, max 3, most relevant first"],
+  "experienceHighlights": {
+    "experience_id": "1-2 sentences in Swedish, third person, explaining specifically why THIS experience is relevant for THIS assignment. Be concrete — mention the specific technologies or responsibilities from the job description that match."
+  }
+}
+Note: experienceHighlights should contain entries ONLY for the experiences in highlightedExperiences (max 3).`
                 const response = await client.messages.create({
                   model: 'claude-haiku-4-5',
                   max_tokens: 1000,

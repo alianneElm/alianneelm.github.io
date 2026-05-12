@@ -20,9 +20,12 @@ Available experience IDs: devoteam, octane, tedsys, gualda, encaprichate
 
 Rules:
 - Write in Swedish
-- Never exaggerate or claim leadership for roles where she wasn't explicitly a lead (only octane Partner Platform was Tech Lead)
-- Use accurate language: "hade ansvar för", "arbetade med", "bidrog till" — not "ledde" unless it's the Octane Tech Lead role
+- Always write in THIRD PERSON — use "hon", "Alianne", "hennes" — never "jag", "mig" or "min"
+  Example: "Alianne har 8 års erfarenhet av..." / "Hon kombinerar..." / "Hennes bakgrund inom..."
+- Never exaggerate leadership. The ONLY Tech Lead role was the Partner Platform at Octane (product she designed and built from scratch, led partner integrations and onboarding). For the Dealer Platform and Decisioning Engine at Octane she was a contributor/developer — not the lead. Never write that she "ledde" the decisioning system, hexagonal architecture or AWS work at Octane.
+- Use accurate language: "bidrog till", "arbetade med", "var del av teamet som" for contributor roles — only use "ledde" or "hade ansvar för" for the Partner Platform Tech Lead role
 - Be concise and sales-oriented
+- Do NOT claim Linux experience. If the job requires Linux, do not mention it as a match — instead highlight her Docker/Kubernetes/AWS work as related context
 
 Respond ONLY with valid JSON in this exact format:
 {
@@ -32,8 +35,18 @@ Respond ONLY with valid JSON in this exact format:
     "personal": "string (2-3 sentences about personality, work style, soft skills relevant to the role)",
     "bonus": "string (1-2 sentences about her passion for learning, quantum computing, or non-profit work — whichever is most relevant)"
   },
-  "highlightedExperiences": ["array of experience IDs to show first, max 3, most relevant to the role"]
+  "highlightedExperiences": ["array of experience IDs to show first, max 3, most relevant to the role"],
+  "experienceHighlights": {
+    "experience_id": "1-2 sentences in Swedish, third person, explaining specifically why THIS experience is relevant for THIS assignment."
+  },
+  "competencies": {
+    "Plattformar": ["list of 2-5 platform/cloud technologies from Alianne's profile that match the assignment, e.g. AWS, Azure, PostgreSQL"],
+    "Tekniker": ["list of 2-5 languages/frameworks that match, e.g. Java, Spring Boot, React.js, Python"],
+    "Verktyg": ["list of 2-4 tools that match, e.g. Docker, Jenkins, JIRA, Kubernetes"],
+    "Verksamhet och funktion": ["list of 1-3 business domains or functions that match, e.g. FinTech, Säkerhet, Systemmigrering"]
+  }
 }
+Note: competencies should only list skills Alianne actually has that are relevant to this specific assignment. Keep each list focused and concise.
 `
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {

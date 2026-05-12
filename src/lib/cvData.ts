@@ -33,7 +33,7 @@ export const EXPERIENCES: Experience[] = [
       'Alianne höjde framgångsrikt teamets interna kompetensnivå inom generativ AI genom att etablera strukturerade ramverk för etisk modellträning. Genom sitt arbete med Snowflake och Azure DevOps optimerade hon datahantering och utvecklingsflöden. Hennes integration av kvantberäkningsprinciper i tekniska diskussioner gav teamet ett betydande försprång i förståelsen för framtida beräkningsmodeller.',
     ],
     tech:
-      'Python · TypeScript · React.js · Next.js · Node.js · Snowflake · Microsoft Azure · Azure DevOps · LangChain · LLM · Generativ AI · AI Ethics · Qiskit · Kubernetes · Docker · GitHub Actions · CI/CD · Jenkins · Argo · PyTest · Scrum · Agile',
+      'Python · TypeScript · React.js · Next.js · Node.js · Snowflake · Microsoft Azure · Azure DevOps · LangChain · LLM · Generativ AI · AI Ethics · Qiskit · Kubernetes · Docker · GitHub Actions · CI/CD · Jenkins · Argo · PyTest · JIRA · Scrum · Agile',
   },
   {
     id: 'octane',
@@ -44,12 +44,12 @@ export const EXPERIENCES: Experience[] = [
     companyDescription:
       'Octane är ett snabbväxande amerikanskt fintechbolag som revolutionerar köpprocessen genom digitala lånelösningar och bankintegrationer. Bolaget hanterar extremt känslig finansiell data och agerar mellanhand mellan återförsäljare, konsumenter och stora finansinstitut, vilket ställer högsta krav på säkerhet, skalbarhet och precision.',
     description: [
-      'Under sina tre år hos Octane axlade Alianne ett ökande ansvar, från utvecklare till teknisk ledare. Under de inledande två åren arbetade hon fokuserat i Dealer-plattformen och Decisioning-motorn, med fokus på att migrera legacy-system till en modern hexagonal arkitektur för att öka testbarhet och underhållbarhet. Inom Decisioning-området ansvarade hon för komplex logik som hämtar och matchar lånevillkor från olika banker baserat på kundens kreditvärdighet, riskprofil och geografiska placering.',
-      'Under sitt sista år klev Alianne in i rollen som Technical Lead för Partner-plattformen, där hon kombinerade djup systemutveckling med strategiskt ansvar för teknisk design och integrationer. Hon agerade direktkontakt för externa partners för att facilitera implementeringen av Octanes digitala produkter, anpassade tekniska lösningar efter specifika partnerkrav och ledde designen av nya integrationer.',
-      'Alianne genomförde framgångsrikt migreringen till hexagonal arkitektur, vilket resulterade i ett mer robust och feltolerant system. Som Tech Lead för Partner-plattformen förkortade hon onboarding-tiden för nya partners genom tydligare tekniska riktlinjer och skräddarsydda integrationslösningar, med bibehållen hög säkerhetsstandard och dataintegritet.',
+      'Under sina tre år hos Octane axlade Alianne ett ökande ansvar, från utvecklare till teknisk ledare. Under de inledande två åren var hon del av teamet för Dealer-plattformen och Decisioning-motorn, där hon bidrog till migreringen av legacy-system till en modern hexagonal arkitektur för att öka testbarhet och underhållbarhet. Hon arbetade med komplex logik för att hämta och matcha lånevillkor från olika banker baserat på kundens kreditvärdighet, riskprofil och geografiska placering — i Java och Python beroende på plattform.',
+      'Under sitt sista år utsågs Alianne till Technical Lead för Partner-plattformen — en produkt hon själv designade och utvecklade från grunden. Produkten väckte stort intresse bland Octanes partners som ville integrera den i sina egna webbplatser. Som Tech Lead ansvarade hon för hela integrationsprocessen: teknisk design, utveckling och skräddarsydda anpassningar av produkten efter varje partners branding och specifika krav.',
+      'I rollen som Tech Lead för Partner-plattformen agerade Alianne direktkontakt mot externa partners, ledde den tekniska onboardingen och förkortade integrationstiden genom tydliga riktlinjer och väldesignade API-lösningar — med bibehållen hög säkerhetsstandard och dataintegritet.',
     ],
     tech:
-      'Python · Django · Java · Spring Boot · Spring Web · Spring Security · React.js · React Redux · TypeScript · JavaScript · PostgreSQL · AWS · AWS Lambda · Hexagonal Architecture · Kubernetes · Docker · Terraform · Cypress · Playwright · DataDog · OpsGenie · Jenkins · Argo · GitHub Actions · CI/CD · Scrum · Agile',
+      'Python · Django · Java · Spring Boot · Spring Web · Spring Security · React.js · React Redux · TypeScript · JavaScript · PostgreSQL · AWS · AWS Lambda · Hexagonal Architecture · Kubernetes · Docker · Terraform · Cypress · Playwright · DataDog · OpsGenie · Jenkins · Argo · GitHub Actions · CI/CD · JIRA · Scrum · Agile',
   },
   {
     id: 'tedsys',
